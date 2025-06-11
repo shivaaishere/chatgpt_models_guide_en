@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Models Guide 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            margin: -20px -20px 40px -20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .tldr {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .tldr h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .tldr p {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        
+        .quick-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .nav-item {
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .nav-item .task {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .nav-item .model {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        
+        .comparison-table {
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 12px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.85rem;
+            vertical-align: top;
+        }
+        
+        tr:hover {
+            background: #f8f9ff;
+        }
+        
+        .status-official {
+            background: #10b981;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .status-testing {
+            background: #f59e0b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .model-name {
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .scenarios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .scenario {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .scenario:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+        }
+        
+        .scenario h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .scenario .recommended {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .scenario .reason {
+            margin-bottom: 10px;
+            color: #4b5563;
+        }
+        
+        .scenario .alternative {
+            font-style: italic;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .cheatsheet {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .cheatsheet h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .cheat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .cheat-item h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .cheat-item ul {
+            list-style: none;
+        }
+        
+        .cheat-item li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .cheat-item li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #fbbf24;
+        }
+        
+        .pricing {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .pricing h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .pricing-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .pricing-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .final-tips {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .final-tips h2 {
+            margin-bottom: 20px;
+        }
+        
+        .final-tips ol {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .final-tips li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+            color: #6b7280;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ChatGPT Models Selection Guide</h1>
+            <div class="subtitle">Your complete 2025 reference for choosing the right AI model</div>
+        </div>
+        
+        <div class="tldr">
+            <h2>TL;DR - Quick Decision Guide</h2>
+            <p>Most tasks: <strong>GPT-4o</strong> • Coding: <strong>GPT-4.1</strong> • Experiments: <strong>o3 & o4-mini</strong> • Creative: <strong>GPT-4.5</strong></p>
+        </div>
+        
+        <div class="quick-nav">
+            <div class="nav-item">
+                <div class="task">Need Content?</div>
+                <div class="model">→ GPT-4o</div>
+            </div>
+            <div class="nav-item">
+                <div class="task">Writing Code?</div>
+                <div class="model">→ GPT-4.1</div>
+            </div>
+            <div class="nav-item">
+                <div class="task">Working with Images?</div>
+                <div class="model">→ o3 or o4-mini</div>
+            </div>
+            <div class="nav-item">
+                <div class="task">Need Speed?</div>
+                <div class="model">→ GPT-4.1 mini</div>
+            </div>
+            <div class="nav-item">
+                <div class="task">Love Experiments?</div>
+                <div class="model">→ GPT-4.5</div>
+            </div>
+        </div>
+        
+        <div class="comparison-table">
+            <h2 style="margin-bottom: 20px; color: #667eea; text-align: center;">Model Comparison Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Status</th>
+                        <th>Best For</th>
+                        <th>Strengths</th>
+                        <th>Weaknesses</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="model-name">GPT-4o</span></td>
+                        <td><span class="status-official">Official</span></td>
+                        <td>Universal tasks, content, analysis</td>
+                        <td>Stability, multimodal, speed</td>
+                        <td>Weaker at coding</td>
+                        <td>Free (limited), Plus, Pro, Team</td>
+                    </tr>
+                    <tr>
+                        <td><span class="model-name">GPT-4.1</span></td>
+                        <td><span class="status-official">Official</span></td>
+                        <td>Programming, instruction following</td>
+                        <td>+21% coding vs GPT-4o, 1M token context</td>
+                        <td>API only in ChatGPT</td>
+                        <td>Plus, Pro, Team</td>
+                    </tr>
+                    <tr>
+                        <td><span class="model-name">GPT-4.1 mini</span></td>
+                        <td><span class="status-official">Official</span></td>
+                        <td>Quick tasks, resource efficiency</td>
+                        <td>Speed, cost-effective</td>
+                        <td>Limited capabilities</td>
+                        <td>Free, Plus, Pro, Team</td>
+                    </tr>
+                    <tr>
+                        <td><span class="model-name">o3</span></td>
+                        <td><span class="status-official">Official</span></td>
+                        <td>Complex logic, math, visual analysis</td>
+                        <td>Advanced reasoning, image thinking</td>
+                        <td>Slower, may be overkill</td>
+                        <td>Plus, Pro, Team</td>
+                    </tr>
+                    <tr>
+                        <td><span class="model-name">o4-mini</span></td>
+                        <td><span class="status-official">Official</span></td>
+                        <td>Fast logic, images, code</td>
+                        <td>Speed + reasoning, multimodal</td>
+                        <td>Limited vs o3</td>
+                        <td>Plus, Pro, Team</td>
+                    </tr>
+                    <tr>
+                        <td><span class="model-name">GPT-4.5</span></td>
+                        <td><span class="status-testing">Testing</span></td>
+                        <td>Creative writing, empathetic content</td>
+                        <td>Creativity, context understanding, "EQ"</td>
+                        <td>Unstable, experimental</td>
+                        <td>Pro (preview only)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="scenarios">
+            <div class="scenario">
+                <h3>📝 Content Creation & Copywriting</h3>
+                <div class="recommended">Choose: GPT-4o</div>
+                <div class="reason"><strong>Why:</strong> Optimal balance of quality, speed, and stability. Excellent at understanding briefs and creating structured content.</div>
+                <div class="alternative"><strong>Alternative:</strong> GPT-4.5 for experimental creative content with more natural tone.</div>
+            </div>
+            
+            <div class="scenario">
+                <h3>💻 Programming & Technical Docs</h3>
+                <div class="recommended">Choose: GPT-4.1</div>
+                <div class="reason"><strong>Why:</strong> 21.4% better at development tasks on SWE-bench, understands large codebases, better instruction following.</div>
+                <div class="alternative"><strong>Alternative:</strong> GPT-4.1 mini for simple scripts and quick fixes.</div>
+            </div>
+            
+            <div class="scenario">
+                <h3>🖼️ Image Analysis & Visual Tasks</h3>
+                <div class="recommended">Choose: o3 or o4-mini</div>
+                <div class="reason"><strong>Why:</strong> First models that can "think with images" — integrate visual information directly into reasoning chains.</div>
+                <div class="alternative"><strong>When o3:</strong> Complex diagram analysis, detailed study<br><strong>When o4-mini:</strong> Quick processing, simple image questions</div>
+            </div>
+            
+            <div class="scenario">
+                <h3>⚡ Quick Questions & Chat</h3>
+                <div class="recommended">Choose: GPT-4.1 mini or o4-mini</div>
+                <div class="reason"><strong>Why:</strong> Maximum response speed while maintaining quality.</div>
+                <div class="alternative"><strong>Alternative:</strong> Stay with GPT-4o if you prefer consistency over speed.</div>
+            </div>
+            
+            <div class="scenario">
+                <h3>📊 Complex Analytics & Research</h3>
+                <div class="recommended">Choose: o3</div>
+                <div class="reason"><strong>Why:</strong> Designed to handle more complex tasks than existing model types like GPT-4o. Better for multi-step reasoning.</div>
+                <div class="alternative"><strong>Alternative:</strong> GPT-4.1 for structured analysis with large context windows.</div>
+            </div>
+            
+            <div class="scenario">
+                <h3>🧪 Experimental Tasks</h3>
+                <div class="recommended">Choose: GPT-4.5</div>
+                <div class="reason"><strong>Why:</strong> Better understands what humans mean and interprets subtle cues with greater nuance and "EQ", but remember — it's a testing model.</div>
+                <div class="alternative"><strong>Alternative:</strong> o3 for experimental reasoning tasks with more stability.</div>
+            </div>
+        </div>
+        
+        <div class="cheatsheet">
+            <h2>⚡ Quick Switch Guide</h2>
+            <div class="cheat-grid">
+                <div class="cheat-item">
+                    <h4>Stay on GPT-4o if:</h4>
+                    <ul>
+                        <li>Working with regular tasks</li>
+                        <li>Need stable results</li>
+                        <li>Creating business content</li>
+                        <li>Don't want to experiment</li>
+                    </ul>
+                </div>
+                <div class="cheat-item">
+                    <h4>Switch to other models if:</h4>
+                    <ul>
+                        <li>GPT-4.1: writing or debugging code</li>
+                        <li>o3: solving complex logical problems</li>
+                        <li>o4-mini: need speed with images</li>
+                        <li>GPT-4.5: experimenting with creativity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pricing">
+            <h2>💰 Pricing & Availability</h2>
+            <div class="pricing-grid">
+                <div class="pricing-item">
+                    <h4>Free</h4>
+                    <p>GPT-4o (limited)<br>GPT-4.1 mini</p>
+                </div>
+                <div class="pricing-item">
+                    <h4>Plus ($20/mo)</h4>
+                    <p>All models with limitations</p>
+                </div>
+                <div class="pricing-item">
+                    <h4>Pro ($200/mo)</h4>
+                    <p>All models unlimited + GPT-4.5</p>
+                </div>
+                <div class="pricing-item">
+                    <h4>Team ($25-30/mo)</h4>
+                    <p>All Plus models + team features</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="final-tips">
+            <h2>🎯 Final Recommendations</h2>
+            <ol>
+                <li><strong>Use GPT-4o by default</strong> — it handles 90% of tasks well</li>
+                <li><strong>Switch to specialized models</strong> only when you know exactly why</li>
+                <li><strong>Experiment with GPT-4.5</strong> if you have Pro subscription and creative tasks</li>
+                <li><strong>Don't chase new models</strong> for novelty — focus on results</li>
+            </ol>
+            <p style="margin-top: 20px; font-style: italic;">Remember: The best model is the one that solves your task efficiently and reliably.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Information accurate as of June 2025. Check OpenAI's official documentation for updates.</p>
+            <p>Created for professionals who want to make informed decisions about AI model selection.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Add print functionality
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                window.print();
+            }
+        });
+        
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
