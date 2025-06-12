@@ -16,8 +16,8 @@
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2d3748;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 50%, #e2e8f0 100%);
             min-height: 100vh;
         }
         
@@ -29,7 +29,7 @@
             margin-top: 20px;
             margin-bottom: 20px;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(113, 128, 150, 0.15);
         }
         
         .header {
@@ -40,6 +40,7 @@
             color: white;
             border-radius: 15px;
             margin: -20px -20px 40px -20px;
+            border: 2px solid #a78bfa;
         }
         
         .header h1 {
@@ -55,12 +56,13 @@
         }
         
         .tldr {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(135deg, #4fd1c7, #3182ce);
             color: white;
             padding: 25px;
             border-radius: 15px;
             margin-bottom: 40px;
             text-align: center;
+            border: 1px solid #4fd1c7;
         }
         
         .tldr h2 {
@@ -81,12 +83,13 @@
         }
         
         .nav-item {
-            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
-            color: white;
+            background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+            color: #2d3748;
             padding: 20px;
             border-radius: 12px;
             text-align: center;
             transition: transform 0.3s ease;
+            border: 1px solid #4fd1c7;
         }
         
         .nav-item:hover {
@@ -101,6 +104,7 @@
         .nav-item .model {
             font-size: 1.1rem;
             font-weight: 700;
+            color: #2b6cb0;
         }
         
         .comparison-table {
@@ -114,7 +118,7 @@
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(113, 128, 150, 0.15);
         }
         
         th {
@@ -124,6 +128,7 @@
             font-weight: 600;
             text-align: left;
             font-size: 0.9rem;
+            border-bottom: 2px solid #a78bfa;
         }
         
         td {
@@ -134,11 +139,11 @@
         }
         
         tr:hover {
-            background: #f8f9ff;
+            background: #f7fafc;
         }
         
         .status-official {
-            background: #10b981;
+            background: #48bb78;
             color: white;
             padding: 4px 8px;
             border-radius: 6px;
@@ -147,7 +152,7 @@
         }
         
         .status-testing {
-            background: #f59e0b;
+            background: #ed8936;
             color: white;
             padding: 4px 8px;
             border-radius: 6px;
@@ -169,7 +174,7 @@
         
         .scenario {
             background: white;
-            border: 2px solid #e5e7eb;
+            border: 2px solid #e2e8f0;
             border-radius: 15px;
             padding: 25px;
             transition: all 0.3s ease;
@@ -178,7 +183,7 @@
         .scenario:hover {
             border-color: #667eea;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
         }
         
         .scenario h3 {
@@ -189,8 +194,8 @@
         }
         
         .scenario .recommended {
-            background: #ecfdf5;
-            color: #065f46;
+            background: #f0fff4;
+            color: #276749;
             padding: 10px 15px;
             border-radius: 8px;
             margin-bottom: 10px;
@@ -199,12 +204,12 @@
         
         .scenario .reason {
             margin-bottom: 10px;
-            color: #4b5563;
+            color: #4a5568;
         }
         
         .scenario .alternative {
             font-style: italic;
-            color: #6b7280;
+            color: #718096;
             font-size: 0.9rem;
         }
         
@@ -214,6 +219,7 @@
             padding: 30px;
             border-radius: 15px;
             margin-bottom: 40px;
+            border: 2px solid #a78bfa;
         }
         
         .cheatsheet h2 {
@@ -246,11 +252,11 @@
             content: '→';
             position: absolute;
             left: 0;
-            color: #fbbf24;
+            color: #a78bfa;
         }
         
         .pricing {
-            background: #f8fafc;
+            background: #f7fafc;
             padding: 25px;
             border-radius: 15px;
             margin-bottom: 40px;
@@ -273,7 +279,7 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            border: 2px solid #e5e7eb;
+            border: 2px solid #e2e8f0;
         }
         
         .pricing-item h4 {
@@ -282,7 +288,7 @@
         }
         
         .final-tips {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(135deg, #4fd1c7, #3182ce);
             color: white;
             padding: 30px;
             border-radius: 15px;
@@ -308,9 +314,9 @@
             text-align: center;
             margin-top: 40px;
             padding: 20px;
-            background: #f8fafc;
+            background: #f7fafc;
             border-radius: 10px;
-            color: #6b7280;
+            color: #718096;
         }
         
         @media print {
@@ -420,7 +426,7 @@
                         <td>Creative writing, empathetic content</td>
                         <td>Creativity, context understanding, "EQ"</td>
                         <td>Unstable, experimental</td>
-                        <td>Pro (preview only)</td>
+                        <td>Plus, Pro, Team (preview)</td>
                     </tr>
                 </tbody>
             </table>
@@ -503,11 +509,11 @@
                 </div>
                 <div class="pricing-item">
                     <h4>Plus ($20/mo)</h4>
-                    <p>All models with limitations</p>
+                    <p>All models with limitations + GPT-4.5 preview</p>
                 </div>
                 <div class="pricing-item">
                     <h4>Pro ($200/mo)</h4>
-                    <p>All models unlimited + GPT-4.5</p>
+                    <p>All models unlimited + advanced features</p>
                 </div>
                 <div class="pricing-item">
                     <h4>Team ($25-30/mo)</h4>
